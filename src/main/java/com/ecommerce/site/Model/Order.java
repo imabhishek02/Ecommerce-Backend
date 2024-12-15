@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,9 +25,11 @@ public class Order {
     private User user;
     private String address;
     private String phoneNumber;
+    private LocalDateTime createdAt;
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
+
 
     public enum  OrderStatus{
         PREPARING,DELIVERING,DELIVRED,CANCELLED
