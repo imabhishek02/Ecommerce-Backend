@@ -4,9 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-#Ignore configuration files
-application.properties
-.env
+
 
 ### STS ###
 .apt_generated
