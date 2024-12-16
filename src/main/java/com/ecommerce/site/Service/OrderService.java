@@ -59,7 +59,7 @@ public class OrderService {
         order.setStatus(Order.OrderStatus.PREPARING);
         order.setCreatedAt(LocalDateTime.now());
 
-        List<OrderItem> orderItem= createOrder(cart,order);
+        List<OrderItem> orderItem= createOrderItems(cart,order);
         order.setItems(orderItem);
         Order savedOrder = orderRepo.save(order);
         cartService.clearCart(userId);
